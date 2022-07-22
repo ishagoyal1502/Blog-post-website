@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<h1><%=user.username%></h1>
+<h3><%=user.email%></h3>
+
+<a href="/compose" class="btn">Compose</a>
+
+<% for(var i=0;i<blogs.length;i++){ %>
+  <h1><%=blogs[i].title%></h1>
+  <p>
+    <%=blogs[i].body%>
+  </p>
+<% } %>
+
+<%- include("partials/footer") -%>

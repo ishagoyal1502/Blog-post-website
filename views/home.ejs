@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+    <h1>Home</h1>
+    <p>
+      <%=homeContent%>
+    </p>
+<div class="card-deck">
+  <% posts.forEach(function(post){ %>
+  <% var input=post.body.substring(0,100); %>
+<div class="card" style="width:100%">
+<div class="card-body">
+  <h1 class="card-title" style="margin-bottom:0"><%=post.title%></h1>
+  <h5 class="card-subtitle"style="margin-top:0; color:grey" >( - <%=post.username%> )</h5>
+
+<p class="card-text">
+<%=input%>...<a href="/posts/<%=post._id%>" >Read More</a>
+</p>
+</div>
+</div>
+
+  <% }) %>
+</div>
+
+
+
+<%- include("partials/footer") -%>

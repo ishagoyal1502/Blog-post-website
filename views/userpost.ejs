@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+<h1><%=title%></h1>
+<p>
+  <%=input%>
+</p>
+<div class="row delete-update">
+  <div class="col-lg-1 col-md-1 col-sm-1">
+    <form method="post" action="/delete">
+      <button type="submit" name="delete" value="<%=id%>" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+  <div class="col-lg-1 col-md-1 col-sm-1">
+    <form method="post" action="/update">
+      <button type="submit" name="update" value="<%=id%>" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+
+
+</div>
+
+<%- include("partials/footer") -%>
